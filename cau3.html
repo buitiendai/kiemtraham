@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số nhỏ nhất</title>
+</head>
+<body>
+    <input type="text" id="nhapa">
+    <input type="text" id="nhapb">
+    <input type="text" id="nhapc">
+    <button onclick="timSo();">Tìm số</button>
+    <div>Tìm số nhỏ nhất: <span id="ketqua"></span></div>
+    <script>
+        function tim(x, y, z){
+            if(x < y && x < z){
+                return x;
+            } 
+            if(y < x && y < z) {
+                return y;
+            }
+            return z;
+        }
+
+        function timSo() {
+            let a = +document.getElementById("nhapa").value;
+            let b = +document.getElementById("nhapb").value;
+            let c = +document.getElementById("nhapc").value;
+            let inRa = tim(a,b,c);
+            document.getElementById("ketqua").innerHTML = inRa;
+        }
+    </script>
+</body>
+</html>

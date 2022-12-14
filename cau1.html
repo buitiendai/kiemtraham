@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các số từ a tới b</title>
+</head>
+<body>
+    <input type="text" id="nhapa">
+    <input type="text" id="nhapb">
+    <button onclick="tinhTong();">Tính tổng</button>
+    <div>Tổng các số từ a tới b là: <span id="ketqua"></span></div>
+    <script>
+        function total(x, y){
+            let z = 0;
+            for (let i=x; i<=y; i++){
+                z += i;
+            }
+            return z;
+        }
+
+        function tinhTong() {
+            let a = +document.getElementById("nhapa").value;
+            let b = +document.getElementById("nhapb").value;
+            let tong = total(a,b);
+            document.getElementById("ketqua").innerHTML = tong;
+        }
+    </script>
+</body>
+</html>
